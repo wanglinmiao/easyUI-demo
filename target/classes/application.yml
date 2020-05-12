@@ -1,0 +1,14 @@
+server:
+  port: 8890
+  servlet:
+    context-path: /kgc
+spring:
+  datasource:
+    password: 1234
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/mytest
+  thymeleaf:
+    cache: false
+logging:
+  level:
+    cn.com.mapper: debug

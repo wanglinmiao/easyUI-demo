@@ -1,0 +1,15 @@
+#div-toolbar{
+    padding: 10px;
+}
+#div-toolbar>div{
+    margin-bottom: 10px;
+}
+#div-input{
+    text-align: center;
+    margin: 20px 0;
+}
+#div-input>p>input{
+    width: 200px;
+    height:30px;
+    border-radius: 5px;
+}

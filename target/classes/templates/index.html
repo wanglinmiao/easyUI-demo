@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/easyui/themes/default/easyui.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/easyui/themes/icon.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+    <script type="text/javascript" th:src="@{/easyui/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/easyui/jquery.easyui.min.js}"></script>
+    <script type="text/javascript" th:src="@{/easyui/locale/easyui-lang-zh_CN.js}"></script>
+    <script type="text/javascript" th:src="@{/js/login.js}"></script>
+    <script type="text/javascript">
+        var ctxPath="[[@{/}]]";
+    </script>
+</head>
+<body class="easyui-layout" style="padding: 0;margin: 0">
+    <div data-options="region:'north',split:false" style="height:80px;background-color: #1e282c;overflow: hidden">
+        <h1 id="h1-title">阿里巴后台管理系统</h1>
+        <p id="p-user">
+            <!--<span id="time"></span>&nbsp;&nbsp;&nbsp;-->
+            欢迎您,
+            <span th:text="${session.userInfo.username}">用户</span>
+        </p>
+    </div>
+    <div data-options="region:'south',split:false" style="height:30px;line-height: 24px;text-align: center;overflow: hidden">
+        Copyright © 1999  - 2019 阿里巴科技有限公司 版权所有
+    </div>
+    <div data-options="region:'west',title:'导航',split:true,iconCls:'icon-nav'" style="width:180px;">
+        <ul id="ul-menu"> </ul>
+    </div>
+    <div data-options="region:'center'">
+        <div id="div-tab" class="easyui-tabs">
+            <div title="欢迎页" style="padding:20px;display:none;" data-options="iconCls:'icon-home'">
+                欢迎你使用本系统!
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" th:src="@{/js/index.js}"></script>
+</html>

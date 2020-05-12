@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>阿里巴</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{/easyui/themes/default/easyui.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/easyui/themes/icon.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
+<script type="text/javascript" th:src="@{/easyui/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/easyui/jquery.easyui.min.js}"></script>
+<script type="text/javascript" th:src="@{/easyui/locale/easyui-lang-zh_CN.js}"></script>
+<script type="text/javascript">
+    var ctxPath="[[@{/}]]";
+</script>
+<body>
+<div id="div-login">
+    <form id="form-login"  method="post">
+        <p>用户:<input name="username"></p>
+        <p>密码:<input name="psw"></p>
+    </form>
+    <div id="div-tollbar">
+        <a id="btn-ok" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">登录</a>
+        <a id="btn-clear" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'">重置</a>
+    </div>
+</div>
+</body>
+<script type="text/javascript" th:src="@{/js/login.js}"></script>
+</html>

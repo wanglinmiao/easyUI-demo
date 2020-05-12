@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/easyui/themes/default/easyui.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/easyui/themes/icon.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/role.css}">
+    <script type="text/javascript" th:src="@{/easyui/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/easyui/jquery.easyui.min.js}"></script>
+    <script type="text/javascript" th:src="@{/easyui/locale/easyui-lang-zh_CN.js}"></script>
+    <script type="text/javascript">
+        var ctxPath = "[[@{/}]]";
+    </script>
+</head>
+<body>
+<div id="div-toolbar">
+    <div>
+        <a id="btn-add" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'">新增</a>
+        <a id="btn-edit" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">修改</a>
+        <a id="btn-remove" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</a>
+    </div>
+    <input id="roleName" class="easyui-textbox" data-options="iconCls:'icon-search',prompt:'请输入角色名称'"
+           style="width:200px">
+    <a id="btn-search" href="#" class="easyui-linkbutton" data-options="plain:true">搜索</a>
+</div>
+<table id="table-roles">
+</table>
+<div id="div-edit">
+    <form action="" method="post" id="form-add">
+        <div id="div-input">
+            <input name="id" type="hidden">
+            <p>角色名称:<input name="roleName" class="easyui-validatebox" data-options="required:true"></p>
+            <p>角色描述:<input name="roleDesc" class="easyui-validatebox" data-options="required:true"></p>
+            <p>权限列表:<input id="auths"  name="auths"></p>
+        </div>
+        <div id="div-buttons">
+            <a id="btn-save" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">保存</a>
+            <a id="btn-close" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-redo'">关闭</a>
+        </div>
+    </form>
+</div>
+
+</body>
+<script type="text/javascript" th:src="@{/js/role.js}"></script>
+</html>

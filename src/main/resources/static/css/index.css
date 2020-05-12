@@ -1,0 +1,17 @@
+#h1-title{
+    color: #eee;
+    font-family: 汉仪尚巍手书W ;
+    font-size: 36px;
+    text-indent: 20px;
+    float: left;
+    width: 400px;
+}
+#p-user{
+    color: #eee;
+    font-family: 汉仪尚巍手书W ;
+    font-size: 17px;
+    float: right;
+    width: 400px;
+    position: relative;
+    top: 30px;
+}
